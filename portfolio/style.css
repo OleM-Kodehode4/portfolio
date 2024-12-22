@@ -267,7 +267,7 @@ section {
 }
 
 .box:hover {
-  border: 3px solid rgb(100, 100, 100);
+  border: 3px solid rgb(250, 0, 0);
 }
 
 .box p {
