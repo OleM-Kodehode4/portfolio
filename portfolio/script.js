@@ -109,8 +109,8 @@ document.addEventListener("DOMContentLoaded", () => {
       `
       <div class="about-box">
         <div class="about-info">
-          <h1 id="about-header"><span>Om meg</span></h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi accusamus autem perferendis libero laboriosam consequatur voluptas repellat vel quidem doloribus.</p>
+          <h1 id="about-header"><span>(WIP)</span></h1>
+          <p>Her kommer en quote API, når jeg finner en som fungerer og ikke slutter å fungere når brukeren reloader siden</p>
         </div>
         <h2><span>Skills</span></h2>
         <div class="skills">
@@ -157,14 +157,14 @@ document.addEventListener("DOMContentLoaded", () => {
     createSection(
       "resume",
       `
-      <h1 id="resume-header" class="header"><span>Resume</span></h1>
+      <h1 id="resume-header" class="header"><span>Om meg</span></h1>
       <div class="resume-container">
         <div class="box">
-          <h1><span>Education</span></h1>
+          <h1><span>Fakta</span></h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cum fugiat quaerat. Aliquid accusamus, provident autem, aperiam magnam recusandae vero obcaecati asperiores ratione veniam, placeat perferendis nemo! In asperiores laudantium unde perferendis, blanditiis at nulla voluptate nesciunt exercitationem pariatur sunt.</p>
         </div>
         <div class="box">
-          <h1><span>Experience</span></h1>
+          <h1><span>Erfaring og kompetanse</span></h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cum fugiat quaerat. Aliquid accusamus, provident autem, aperiam magnam recusandae vero obcaecati asperiores ratione veniam, placeat perferendis nemo! In asperiores laudantium unde perferendis, blanditiis at nulla voluptate nesciunt exercitationem pariatur sunt.</p>
         </div>
         <a href="./resume.pdf" class="download-btn" download> <i class='bx bxs-download'></i> Download Resume</a>
@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>
       <div class="col-right">
-        <span>Om min kunnskap</span>
+        <span>Om min reise</span>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatem, quod, quae, quos quas quia quibusdam quidem dolorum voluptates, doloremque quae. Quisquam voluptatem, quod, quae, quos quas quia quibusdam quidem dolorum voluptates, doloremque quae.</p>
         <div class="social-icons">
           <span><i class='bx bxl-github'></i></span>
