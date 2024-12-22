@@ -9,6 +9,7 @@
 
 ### Nye seksjoner
 - **Hjem**: En introduksjonsseksjon med et bilde og en kort beskrivelse.
+
 - **Om meg**: En seksjon som beskriver ferdighetene mine og gir en kort biografi.
 - **Prosjekter**: En seksjon som viser frem noen av prosjektene mine med beskrivelser og bilder.
 - **CV**: En seksjon som inneholder informasjon om utdanning og erfaring, samt en nedlastbar CV.

@@ -162,7 +162,7 @@ section {
   border-radius: 10px;
 }
 
-#about {
+#skill {
   background-color: var(--second-background);
   display: flex;
   align-items: center;
@@ -170,23 +170,23 @@ section {
   gap: 5em;
 }
 
-#about img {
+#skill img {
   width: 30vw;
   border-radius: 1em;
 }
 
-.about-box {
+.skill-box {
   display: flex;
   flex-direction: column;
   text-align: left;
   gap: 2em;
 }
 
-.about-box h1 {
+.skill-box h1 {
   font-size: 5em;
 }
 
-.about-box p {
+.skill-box p {
   color: white;
   opacity: 0.8;
 }
@@ -230,7 +230,7 @@ section {
   color: white;
 }
 
-.about-box h2 {
+.skill-box h2 {
   font-size: 2.5em;
 }
 
@@ -384,30 +384,30 @@ section {
   display: none; /* Hide the testimonials section */
 }
 
-.resume {
+.about {
   background-color: var(--second-background);
   padding: 5% 15%;
   color: white;
   text-align: center;
 }
 
-.resume h2 {
+.about h2 {
   font-size: 3em;
   margin-bottom: 1em;
 }
 
-.resume a {
+.about a {
   color: var(--linear-gradient);
   text-decoration: none;
   font-size: 1.2em;
   transition: color 0.3s ease-in-out;
 }
 
-.resume a:hover {
+.about a:hover {
   color: white;
 }
 
-.resume .download-btn {
+.about .download-btn {
   padding: 0.5em 1em;
   color: white;
   font-weight: 500;
@@ -421,7 +421,7 @@ section {
   text-decoration: none;
 }
 
-.resume .download-btn:hover {
+.about .download-btn:hover {
   background-color: white;
   color: var(--background);
 }
@@ -530,16 +530,16 @@ footer {
   #home img {
     width: 24vw;
   }
-  #about {
+  #skill {
     flex-direction: column;
   }
-  #about img {
+  #skill img {
     width: 32vw;
   }
-  #about h1 {
+  #skill h1 {
     font-size: 4em;
   }
-  #about ul {
+  #skill ul {
     font-size: 1em;
   }
 
@@ -565,7 +565,7 @@ footer {
   #home img {
     width: 32vw;
   }
-  #about .skills {
+  #skill .skills {
     gap: 3em;
   }
   #project .header {

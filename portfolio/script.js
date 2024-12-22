@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const ul = document.createElement("ul");
       ul.className = "links";
 
-      const links = ["Hjem", "Om meg", "Prosjekter", "CV", "Kontakt"];
-      const ids = ["home", "about", "project", "resume", "contact"];
+      const links = ["Hjem", "Ferdigheter", "Prosjekter", "Om meg", "Kontakt"];
+      const ids = ["home", "skill", "project", "about", "contact"];
       links.forEach((link, index) => {
         const li = document.createElement("li");
         const a = document.createElement("a");
@@ -105,11 +105,11 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     createSection(
-      "about",
+      "skill",
       `
-      <div class="about-box">
-        <div class="about-info">
-          <h1 id="about-header"><span>(WIP)</span></h1>
+      <div class="skill-box">
+        <div class="skill-info">
+          <h1 id="skil-header"><span>(WIP)</span></h1>
           <p>Her kommer en quote API, når jeg finner en som fungerer og ikke slutter å fungere når brukeren reloader siden</p>
         </div>
         <h2><span>Skills</span></h2>
@@ -155,10 +155,10 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     createSection(
-      "resume",
+      "about",
       `
-      <h1 id="resume-header" class="header"><span>Om meg</span></h1>
-      <div class="resume-container">
+      <h1 id="about-header" class="header"><span>Om meg</span></h1>
+      <div class="about-container">
         <div class="box">
           <h1><span>Fakta</span></h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cum fugiat quaerat. Aliquid accusamus, provident autem, aperiam magnam recusandae vero obcaecati asperiores ratione veniam, placeat perferendis nemo! In asperiores laudantium unde perferendis, blanditiis at nulla voluptate nesciunt exercitationem pariatur sunt.</p>
