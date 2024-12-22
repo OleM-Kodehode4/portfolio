@@ -19,16 +19,21 @@ body {
 }
 
 nav {
-  position: fixed;
+  position: sticky; /* Make the header sticky */
   top: 0;
   width: 100%;
-  padding: 2em 15%;
+  padding: 1em 15%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: rgb(15, 15, 15, 0.8);
   backdrop-filter: blur(10px);
   z-index: 1000;
+  transition: background-color 0.3s ease-in-out;
+}
+
+nav.scrolled {
+  background-color: rgb(15, 15, 15, 1); /* Solid background when scrolled */
 }
 
 ul {
@@ -116,7 +121,7 @@ section {
   max-width: 600px;
 }
 .info-box h1 {
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 500;
   animation: fadeIn 1s ease-in-out;
 }
@@ -213,10 +218,16 @@ section {
 
 .skills ul li span:hover {
   transform: translateX(10px);
+  color: white;
 }
 
 .skills ul li i {
   font-size: 1.2em;
+}
+
+.skills ul li i:hover {
+  font-size: 1.2em;
+  color: white;
 }
 
 .about-box h2 {
@@ -252,7 +263,7 @@ section {
   color: white;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-  animation: fadeIn 1s ease-in-out;
+  animation: slideIn 1s ease-in-out;
 }
 
 .box:hover {
@@ -366,6 +377,52 @@ section {
 
 .contact-form button:hover {
   background-color: lightgray;
+  color: var(--background);
+}
+
+.testimonials {
+  display: none; /* Hide the testimonials section */
+}
+
+.resume {
+  background-color: var(--second-background);
+  padding: 5% 15%;
+  color: white;
+  text-align: center;
+}
+
+.resume h2 {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+.resume a {
+  color: var(--linear-gradient);
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease-in-out;
+}
+
+.resume a:hover {
+  color: white;
+}
+
+.resume .download-btn {
+  padding: 0.5em 1em;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 0.5em;
+  font-size: 1.1em;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  background-color: var(--background);
+  text-decoration: none;
+}
+
+.resume .download-btn:hover {
+  background-color: white;
   color: var(--background);
 }
 
@@ -552,4 +609,32 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+a:focus,
+button:focus {
+  outline: 2px solid var(--linear-gradient);
+  outline-offset: 2px;
+}
+
+nav ul a:focus,
+.btn:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

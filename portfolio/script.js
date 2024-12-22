@@ -13,35 +13,42 @@ document.addEventListener("DOMContentLoaded", () => {
     function createNav() {
       console.log("Creating navigation");
       const navElement = document.createElement("nav");
+      navElement.setAttribute("role", "navigation");
 
       const logo = document.createElement("a");
       logo.href = "#";
       logo.className = "logo";
-      logo.innerHTML = "<span>Ole Mathias</span>";
+      logo.innerHTML = "<span>Portfolio</span>";
+      logo.setAttribute("aria-label", "Homepage");
       navElement.appendChild(logo);
 
       const ul = document.createElement("ul");
       ul.className = "links";
 
-      const links = ["Hjem", "Om meg", "Prosjekter", "Kontakt meg"];
-      const ids = ["home", "about", "project", "contact"];
+      const links = ["Hjem", "Om meg", "Prosjekter", "CV", "Kontakt"];
+      const ids = ["home", "about", "project", "resume", "contact"];
       links.forEach((link, index) => {
+        const li = document.createElement("li");
         const a = document.createElement("a");
         a.href = `#${ids[index]}`;
         a.textContent = link;
-        ul.appendChild(a);
+        a.setAttribute("role", "menuitem");
+        li.appendChild(a);
+        ul.appendChild(li);
       });
       navElement.appendChild(ul);
 
       const menuIcon = document.createElement("i");
       menuIcon.className = "bx bx-menu-alt-right";
       menuIcon.id = "menu";
+      menuIcon.setAttribute("aria-label", "Menu");
       navElement.appendChild(menuIcon);
 
       const contactBtn = document.createElement("a");
       contactBtn.href = "#contact";
       contactBtn.className = "btn";
       contactBtn.textContent = "Kontakt Meg";
+      contactBtn.setAttribute("role", "button");
       navElement.appendChild(contactBtn);
 
       body.appendChild(navElement);
@@ -58,6 +65,15 @@ document.addEventListener("DOMContentLoaded", () => {
           console.error("Error toggling menu:", error);
         }
       });
+
+      // Add scroll event listener for sticky header
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navElement.classList.add("scrolled");
+        } else {
+          navElement.classList.remove("scrolled");
+        }
+      });
     }
 
     function createSection(id, innerHTML) {
@@ -65,6 +81,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const section = document.createElement("section");
       section.id = id;
       section.innerHTML = innerHTML;
+      section.setAttribute("role", "region");
+      section.setAttribute("aria-labelledby", `${id}-header`);
       body.appendChild(section);
     }
 
@@ -73,14 +91,14 @@ document.addEventListener("DOMContentLoaded", () => {
     createSection(
       "home",
       `
-      <img src="./pics/image.jpg" alt="" />
+      <img src="./pics/pic-ole-1.jpg" alt="Ole Mathias" />
       <div class="info-box">
-        <h1><span>Hei, jeg er Ole Mathias</span></h1>
-        <h3><span>Jr.Frontend Dev</span><i class='bx bx-map'></i>Norge</h3>
+        <h1 id="home-header"><span>Eg er Ole Mathias</span></h1>
+        <h3><span>Jr.Frontend</span></h3>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, labore!</p>
       </div>
       <div class="btn-box">
-        <div class="btn">Ansettelse?</div>
+        <div class="btn">Github</div>
         <div class="btn">Kontakt meg</div>
       </div>
     `
@@ -91,47 +109,65 @@ document.addEventListener("DOMContentLoaded", () => {
       `
       <div class="about-box">
         <div class="about-info">
-          <h1><span>Om meg</span></h1>
+          <h1 id="about-header"><span>Om meg</span></h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi accusamus autem perferendis libero laboriosam consequatur voluptas repellat vel quidem doloribus.</p>
         </div>
         <h2><span>Skills</span></h2>
         <div class="skills">
           <ul>
-            <li><span><i class="bx bx-chevron-right"></i> HTML</span></li>
-            <li><span><i class="bx bx-chevron-right"></i> CSS</span></li>
-            <li><span><i class="bx bx-chevron-right"></i> JavaScript</span></li>
+            <li><span><i class='bx bxl-html5'></i> HTML</span></li>
+            <li><span><i class='bx bxl-css3' ></i> CSS</span></li>
+            <li><span><i class='bx bxl-javascript' ></i></i> JavaScript</span></li>
           </ul>
           <ul>
-            <li><span><i class="bx bx-chevron-right"></i> React</span></li>
-            <li><span><i class="bx bx-chevron-right"></i> Node</span></li>
-            <li><span><i class="bx bx-chevron-right"></i> Figma</span></li>
+            <li><span><i class='bx bxl-react' ></i> React</span></li>
+            <li><span><i class='bx bxl-git' ></i> Git</span></li>
+            <li><span><i class='bx bxl-figma' ></i> Figma</span></li>
           </ul>
         </div>
       </div>
-      <img src="./pics/image.jpg" alt="" />
+      <img src="./pics/pic-ole-2.jpg" alt="Ole Mathias" />
     `
     );
 
     createSection(
       "project",
       `
-      <h1 class="header"><span>Prosjekter</span></h1>
+      <h1 id="project-header" class="header"><span>Prosjekter</span></h1>
       <div class="project-container">
         <div class="box">
           <h1><span>Prosjekt-1</span></h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cum fugiat quaerat. Aliquid accusamus, provident autem, aperiam magnam recusandae vero obcaecati asperiores ratione veniam, placeat perferendis nemo! In asperiores laudantium unde perferendis, blanditiis at nulla voluptate nesciunt exercitationem pariatur sunt.</p>
-          <img src="./pics/web-design.jpg" alt="" />
+          <img src="./pics/web-design.jpg" alt="Prosjekt-1" />
         </div>
         <div class="box">
           <h1><span>Prosjekt-2</span></h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cum fugiat quaerat. Aliquid accusamus, provident autem, aperiam magnam recusandae vero obcaecati asperiores ratione veniam, placeat perferendis nemo! In asperiores laudantium unde perferendis, blanditiis at nulla voluptate nesciunt exercitationem pariatur sunt.</p>
-          <img src="./pics/web-dev.jpg" alt="" />
+          <img src="./pics/web-dev.jpg" alt="Prosjekt-2" />
         </div>
         <div class="box">
           <h1><span>Prosjekt-3</span></h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cum fugiat quaerat. Aliquid accusamus, provident autem, aperiam magnam recusandae vero obcaecati asperiores ratione veniam, placeat perferendis nemo! In asperiores laudantium unde perferendis, blanditiis at nulla voluptate nesciunt exercitationem pariatur sunt.</p>
-          <img src="./pics/web-dev.jpg" alt="" />
+          <img src="./pics/web-dev.jpg" alt="Prosjekt-3" />
         </div>
+      </div>
+    `
+    );
+
+    createSection(
+      "resume",
+      `
+      <h1 id="resume-header" class="header"><span>Resume</span></h1>
+      <div class="resume-container">
+        <div class="box">
+          <h1><span>Education</span></h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cum fugiat quaerat. Aliquid accusamus, provident autem, aperiam magnam recusandae vero obcaecati asperiores ratione veniam, placeat perferendis nemo! In asperiores laudantium unde perferendis, blanditiis at nulla voluptate nesciunt exercitationem pariatur sunt.</p>
+        </div>
+        <div class="box">
+          <h1><span>Experience</span></h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cum fugiat quaerat. Aliquid accusamus, provident autem, aperiam magnam recusandae vero obcaecati asperiores ratione veniam, placeat perferendis nemo! In asperiores laudantium unde perferendis, blanditiis at nulla voluptate nesciunt exercitationem pariatur sunt.</p>
+        </div>
+        <a href="./resume.pdf" class="download-btn" download> <i class='bx bxs-download'></i> Download Resume</a>
       </div>
     `
     );
@@ -139,12 +175,17 @@ document.addEventListener("DOMContentLoaded", () => {
     createSection(
       "contact",
       `
-      <h1 class="header"><span>Kontakt Meg</span></h1>
+      <h1 id="contact-header" class="header"><span>Kontakt Meg</span></h1>
+      <div class="contact-info"> 
+      <ul>
+            <li><span><i class='bx bxl-github'></i> GitHub</span></li>
+            <li><span><i class='bx bxl-linkedin'></i> Linkedin</span></li>
+          </ul>
+      </div>
       <div class="contact-box">
         <div class="contact-info">
-          <h1><span>Kontakt Informasjon</span></h1>
           <ul>
-            <li><span><i class="bx bx-map"></i> Volda, Norge</span></li>
+            <li><span><i class="bx bx-map"></i> Norge</span></li>
             <li><span><i class="bx bx-phone"></i> +47 123 45 678</span></li>
             <li><span><i class="bx bx-envelope"></i> example@example.com</span></li>
           </ul>
