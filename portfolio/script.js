@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="info-box">
         <h1 id="home-header"><span>Eg er Ole Mathias</span></h1>
         <h3><span>Jr.Frontend</span></h3>
-        <p>Lorem100</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, labore!</p>
       </div>
       <div class="btn-box">
         <div class="btn">Github</div>
