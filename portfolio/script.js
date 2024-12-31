@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <h1 id="skil-header"><span>(WIP)</span></h1>
           <p>Her kommer en quote API, når jeg finner en som fungerer og ikke slutter å fungere når brukeren reloader siden</p>
         </div>
-        <h2><span>Skills</span></h2>
+        <h2><span><i class='bx bx-code-alt'></i>Skills</span></h2>
         <div class="skills">
           <ul>
             <li><span><i class='bx bxl-html5'></i> HTML</span></li>
