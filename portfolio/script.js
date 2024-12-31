@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `
       <img src="./pics/pic-ole-1.jpg" alt="Ole Mathias" />
       <div class="info-box">
-        <h1 id="home-header"><span>Eg er Ole Mathias</span></h1>
+        <h1 id="home-header"><span>Ole Mathias Brænde</span></h1>
         <h3><span>Jr.Frontend</span></h3>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, labore!</p>
       </div>
@@ -167,10 +167,24 @@ document.addEventListener("DOMContentLoaded", () => {
           <h1><span>Erfaring og kompetanse</span></h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cum fugiat quaerat. Aliquid accusamus, provident autem, aperiam magnam recusandae vero obcaecati asperiores ratione veniam, placeat perferendis nemo! In asperiores laudantium unde perferendis, blanditiis at nulla voluptate nesciunt exercitationem pariatur sunt.</p>
         </div>
-        <a href="./resume.pdf" class="download-btn" download> <i class='bx bxs-download'></i> Download Resume</a>
       </div>
     `
     );
+
+    // createSection(
+    //   "testimonials",
+    //   `
+    //   <h2 id="testimonials-header" class="header"><span>Testimonials</span></h2>
+    //   <div class="about-container">
+    //     <div class="box">
+    //       <p>"Ole Mathias is a fantastic developer. His work is top-notch!" - Client A</p>
+    //     </div>
+    //     <div class="box">
+    //       <p>"Highly recommend Ole Mathias for any frontend projects." - Client B</p>
+    //     </div>
+    //   </div>
+    //   `
+    // );
 
     createSection(
       "contact",
@@ -190,6 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <li><span><i class="bx bx-envelope"></i> example@example.com</span></li>
           </ul>
         </div>
+        <a href="./resume.pdf" class="download-btn" download>📄<span>Download Resume</span></a>
       </div>
     `
     );
