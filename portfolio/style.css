@@ -70,7 +70,7 @@ nav ul a:hover {
   letter-spacing: 1px;
   border-radius: 0.5em;
   font-size: 1.1em;
-  border: 2px solid white;
+  border: 2px solid rgb(255, 82, 82);
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
@@ -78,6 +78,11 @@ nav ul a:hover {
 .btn:hover {
   background-color: white;
   color: var(--background);
+}
+
+.btn:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
 }
 
 span {
@@ -158,7 +163,7 @@ section {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #800000;
+  background-color: red;
   border-radius: 10px;
 }
 
@@ -267,7 +272,7 @@ section {
 }
 
 .box:hover {
-  border: 3px solid rgb(100, 100, 100);
+  border: 3px solid red;
 }
 
 .box p {
@@ -288,8 +293,82 @@ section {
   transform: scale(1.1); /* Zoom effect on hover */
 }
 
-#contact {
+#about {
   background-color: var(--second-background);
+  padding: 5% 15%;
+  color: white;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+.about a {
+  color: var(--linear-gradient);
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease-in-out;
+}
+
+.about a:hover {
+  color: white;
+}
+
+.about .download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 1em;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 0.5em;
+  font-size: 1.1em;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  background-color: var(--background);
+  text-decoration: none;
+}
+
+.about .download-btn:hover {
+  background-color: white;
+  color: var(--background);
+}
+
+.about .download-btn span {
+  margin-left: 0.5em;
+}
+
+/* .testimonials {
+  background-color: var(--second-background);
+  padding: 5% 15%;
+  color: white;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+.testimonials .testimonial {
+  background-color: var(--background);
+  padding: 2em;
+  border-radius: 0.5em;
+  margin-bottom: 2em;
+  opacity: 0.8;
+}
+
+.testimonials .testimonial p {
+  font-size: 1.2em;
+  color: white;
+} */
+
+#contact {
+  background-color: var(--background);
   padding: 5% 15%;
   display: flex;
   flex-direction: column;
@@ -333,7 +412,7 @@ section {
   color: white;
 }
 
-.contact-form {
+/* .contact-form {
   text-align: center;
   width: 100%;
   max-width: 600px;
@@ -378,52 +457,77 @@ section {
 .contact-form button:hover {
   background-color: lightgray;
   color: var(--background);
-}
+} */
 
-.testimonials {
-  display: none; /* Hide the testimonials section */
-}
-
-.about {
-  background-color: var(--second-background);
-  padding: 5% 15%;
-  color: white;
-  text-align: center;
-}
-
-.about h2 {
-  font-size: 3em;
-  margin-bottom: 1em;
-}
-
-.about a {
-  color: var(--linear-gradient);
-  text-decoration: none;
-  font-size: 1.2em;
-  transition: color 0.3s ease-in-out;
-}
-
-.about a:hover {
-  color: white;
-}
-
-.about .download-btn {
-  padding: 0.5em 1em;
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 2em;
   color: white;
   font-weight: 500;
   letter-spacing: 1px;
   border-radius: 0.5em;
-  font-size: 1.1em;
+  font-size: 1.5em;
   border: 2px solid white;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  background-color: var(--second-background);
+  text-decoration: none;
+  margin-top: 2em;
+}
+
+.download-btn:hover {
+  background-color: white;
+  color: var(--background);
+}
+
+.download-btn span {
+  margin-left: 0.5em;
+}
+
+.resume .download-btn:hover {
+  background-color: white;
+  color: var(--background);
+}
+
+.download-section {
   background-color: var(--background);
+  padding: 5% 15%;
+  color: white;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.download-section h2 {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+.download-section .download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 2em;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 0.5em;
+  font-size: 1.5em;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  background-color: var(--second-background);
   text-decoration: none;
 }
 
-.about .download-btn:hover {
+.download-section .download-btn:hover {
   background-color: white;
   color: var(--background);
+}
+
+download-section .download-btn span {
+  margin-left: 0.5em;
 }
 
 footer {
@@ -432,7 +536,7 @@ footer {
   justify-self: center;
   gap: 10em;
   bottom: 0;
-  background-color: var(--background);
+  background-color: var(--second-background);
   width: 100%;
   padding: 5em 15%;
 }
