@@ -9,14 +9,13 @@
 
 ### Nye seksjoner
 - **Hjem**: En introduksjonsseksjon med et bilde og en kort beskrivelse.
-
-- **Om meg**: En seksjon som beskriver ferdighetene mine og gir en kort biografi.
+- **Skill**: En seksjon som beskriver ferdighetene mine, inkludert API-ene jeg har jobbet med, og gir en kort biografi.
 - **Prosjekter**: En seksjon som viser frem noen av prosjektene mine med beskrivelser og bilder.
-- **CV**: En seksjon som inneholder informasjon om utdanning og erfaring, samt en nedlastbar CV.
+- **Om meg**: En seksjon som inneholder informasjon om utdanning og erfaring, samt en nedlastbar CV.
 - **Kontakt**: En seksjon med kontaktinformasjon og lenker til sosiale medier.
 
 ### Nedlastbar CV
-- En knapp er lagt til i CV-seksjonen som lar brukere laste ned en PDF-versjon av CV-en min.
+- En knapp er lagt til i Om meg-seksjonen som lar brukere laste ned en PDF-versjon av CV-en min.
 
 ## Brukte JavaScript-teknikker
 
@@ -32,6 +31,15 @@
 
 ### Tilgjengelighet
 - **ARIA Attributes**: Jeg har brukt ARIA-attributter for å forbedre tilgjengeligheten til porteføljen. Dette inkluderer å legge til `role` og `aria-labelledby` attributter på seksjoner og navigasjonselementer.
+
+## Fremtidige forbedringer
+- **Legge til API**: Implementere et API som fungerer stabilt.
+- **Legge til bilder og lenker**: Fullføre alle seksjoner med relevante bilder og lenker.
+- **Forbedre tilgjengelighet**: Gjøre ytterligere forbedringer for å sikre at porteføljen er tilgjengelig for alle brukere.
+- **Optimalisere ytelse**: Optimalisere koden og ressursene for raskere lastetider.
+
+## Nåværende status
+Porteføljen er under utvikling, og flere funksjoner og innhold vil bli lagt til før den endelige innleveringen. Bilder og lenker er foreløpig ikke inkludert, og API-integrasjon er under vurdering.
 
 ## Kommentar
 Denne porteføljen er langt ifra ferdig, og jeg har enda ikke funnet en API som jeg synest fungerer nokk til at jeg ønsker å implementere den på porteføljen enda. Samt at bilder og div linker ikke fungerer ei heller er lagt til. Er mye endringer jeg ønsker å gjøre men ikke alt jeg får tid til før innleveringen, skal jobbe med den slik den skal være klar til 28.Jan men deadline 20.Jan.
